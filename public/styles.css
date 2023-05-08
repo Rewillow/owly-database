@@ -1,0 +1,46 @@
+body {
+    margin: 0;
+}
+
+.owly {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    height: 99vh;
+    color: rgb(176, 123, 22);
+}
+
+.owly h1 {
+    font-size: 80px;
+}
+
+.owly--logo {
+    width: 280px;
+}
+
+.owly--button--container {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  width: 350px;
+  height: 50px;
+  margin-top: 50px;
+}
+
+.owly--button--container button {
+    background-color: transparent;
+    padding: 10px 20px;
+    font-size: 18px;
+    cursor: pointer;
+    color: rgb(210, 1, 1);
+    font-weight: 600;
+    border: 2px solid rgb(210, 1, 1);
+    border-radius: 5px;
+}
+
+.owly--button--container button:hover {
+    background-color: rgb(210, 1, 1);
+    color: white;
+    transition: 0.4s ease-in-out;
+}
