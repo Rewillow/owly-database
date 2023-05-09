@@ -22,7 +22,7 @@ Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
 
 // CORSI
 
-Route::middleware(['throttle:global'])->group(function () {
+Route::middleware(['throttle:api'])->group(function () {
 
 Route::get('/courses', [CoursesController::class, 'coursesList']); // Per visualizzare tutti i corsi
 
