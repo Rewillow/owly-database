@@ -10,9 +10,9 @@ class Subject extends Model
 {
     use HasFactory;
 
-    protected $fillable = ['name'];
+    protected $fillable = ['name']; // Permette di specificare a quali parametri è concesso assegnare un valore
 
-    public function courses() {
+    public function courses() { // Si stringe una relazione many-to-many con la tabella Courses
         return $this->belongsToMany(Course::class); 
     }
 }
