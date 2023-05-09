@@ -20,6 +20,9 @@ Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
     return $request->user();
 });
 
+// CORSI
+
+Route::middleware(['throttle:api'])->group(function () {
 
 Route::get('/courses', [CoursesController::class, 'coursesList']); // Per visualizzare tutti i corsi
 
@@ -31,10 +34,7 @@ Route::put('/courses/{course}', [CoursesController::class, 'updateCourse']); // 
 
 Route::delete('/courses/{course}', [CoursesController::class, 'destroy']); // Per eliminare un corso specifico
 
-
-
-
-
+// MATERIE 
 
 Route::get('/subjects', [SubjectsController::class, 'subjectsList']); // Per visualizzare tutte le materie
 
@@ -44,4 +44,6 @@ Route::post('/subjects', [SubjectsController::class, 'storeSubject']); // Per cr
 
 Route::put('/subjects/{subject}', [SubjectsController::class, 'updateSubject']); // Per modificare una materia esistente
 
-Route::delete('/subjects/{subject}', [SubjectsController::class, 'destroy']); // Per eliminare un corso specifico
+Route::delete('/subjects/{subject}', [SubjectsController::class, 'destroy']); // Per eliminare una materia specifica
+
+});
