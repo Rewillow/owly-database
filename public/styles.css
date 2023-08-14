@@ -44,3 +44,42 @@ body {
     color: white;
     transition: 0.4s ease-in-out;
 }
+
+@media (min-width: 360px) and (max-width: 499px) {
+
+    .owly h1 {
+        font-size: 50px;
+        text-align: center;
+    }
+
+    .owly--logo {
+        width: 230px;
+    }
+
+    .owly--button--container button {
+        font-size: 15px;
+        padding: 10px 15px;
+    }
+
+}
+@media (min-width: 500px) and (max-width: 699px) {
+
+    .owly h1 {
+        font-size: 60px;
+        text-align: center;
+    }
+
+    .owly--logo {
+        width: 250px;
+    }
+
+    .owly--button--container button {
+        font-size: 16px;
+    }
+
+}
+@media (min-width: 700px) and (max-width: 899px) {
+    .owly h1 {
+        font-size: 70px;
+    }
+}
